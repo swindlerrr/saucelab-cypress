@@ -54,6 +54,7 @@ context('Saucedemo test', () => {
     hamburgerMenu.existHamburgerIcon();
     hamburgerMenu.clickHamburgerIcon(); 
     homePage.clickLogOut();
+    landingPage.isOnLandingPage();
   })
   
   })
