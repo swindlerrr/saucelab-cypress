@@ -9,7 +9,6 @@ const landingPage = new LandingPage();
 const homePage = new HomePage();
 const hamburgerMenu = new HamburgerMenu();
 
-
 context('Saucedemo test', () => {
   beforeEach(() => {
     cy.visit('https://www.saucedemo.com/');
