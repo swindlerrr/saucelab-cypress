@@ -11,10 +11,9 @@ const hamburgerMenu = new HamburgerMenu();
 
 
 context('Saucedemo test', () => {
-  let numberOfItem;
   beforeEach(() => {
-    numberOfItem = 0;
     cy.visit('https://www.saucedemo.com/');
+    cy.clearLocalStorage();
   })
 
   it('Log in', () => {
@@ -55,6 +54,7 @@ context('Saucedemo test', () => {
     hamburgerMenu.clickHamburgerIcon(); 
     homePage.clickLogOut();
     landingPage.isOnLandingPage();
+
   })
   
   })
