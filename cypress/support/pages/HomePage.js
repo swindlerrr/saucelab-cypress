@@ -3,14 +3,11 @@ class HomePage {
     btnLogOut = "#logout_sidebar_link";
 
 
-    isOnHomePage = () => {
-        cy.get( this.homePageLogo).should('exist');
-    }
-
-    clickLogOut = () => {
-        cy.get(this.btnLogOut).click();
-    }
-
+   
+        cy.elementExist( pe.homePageLogo)
+    
+        cy.elementExist(pe.btnLogOut).click();
+   
 
 }
 

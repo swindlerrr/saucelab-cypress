@@ -15,7 +15,17 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
-require('cypress-xpath');
+import '@cypress-audit/lighthouse/commands' 
 
-// Alternatively you can use CommonJS syntax:
-// require('./commands')
+const { lighthouse, prepareAudit } = require('@cypress-audit/lighthouse')
+  
+  module.exports = (on, config) => {
+      on('before:browser:launch', (browser = {}, launchOptions) => {
+        prepareAudit(launchOptions)
+      })
+      
+          on('task', {
+              lighthouse: lighthouse(),
+          })
+        
+  }
